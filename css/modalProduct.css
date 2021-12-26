@@ -1,0 +1,145 @@
+.modal__product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+
+    transition: all 0.3s ease;
+}
+
+.modal__product.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal__product-image-box {
+    width: 45% ;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.modal__product-image-box:hover .product-image__control {
+    opacity: 1;
+}
+
+.modal__product-image-box img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fader 0.3s ease;
+}
+
+.modal__product-image-box img.active {
+    display: block;
+}
+
+.product-image__control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 50px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-image__control:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.product-image__control.right {
+    right: 0;
+
+}
+
+.product-image__control.left {
+    left: 0;
+}
+
+.product-image__control i{
+    font-size: 2.5rem;
+    color: var(--primaty-color);
+}
+
+.modal__product-info {
+    width: 55%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.product__header {
+    font-size: 3rem;
+    color: var(--primaty-color);
+    margin-bottom: 10px;
+}
+
+.product__price {
+    color: #999;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: line-through;
+}
+
+.product__sale {
+    color: var(--red);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.product__rate {
+    font-size: 2rem;
+    color: rgb(248, 212, 6);
+    margin: 15px 0;
+}
+
+.product__disr {
+    font-size: 1.4rem;
+    color: #999;
+    margin: 15px 0;
+
+}
+
+.product__unit {
+    display: flex;
+}
+
+.modal__product .modal__cart-item-input {
+    width: 150px;
+    margin: 15px 20px 15px 0;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.modal__product .modal__product-info .product-add-cart {
+    height: 80px;
+    padding: 0 80px;
+    margin: 30px 0;
+    flex-grow: 0;
+}
+
+.modal__product .modal__product-info .icon-heart {
+    position: relative;
+    right: 0;
+    border: 1px solid #000;
+    padding: 10px;
+    text-shadow: none;
+    border-radius: 100%;
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="loader">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POPU</title>
+
+    <link rel="shortcut icon" type="image/svg" href="./images/logo.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/toast.css">
+    
+    <link rel="stylesheet" href="./pageContact/css/style.css">
+
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/modalCart.css">
+    <link rel="stylesheet" href="./css/modalProfile.css">
+    <link rel="stylesheet" href="./css/modalProduct.css">
+
+  </head>
+  <body>
+    <div id = "main">
+        <div class="navigation">
+            <div class="navigation-container">      
+
+                <div class="menu-bars">
+                    <a href="/index.html" class="logo">
+                        <img src="./images/logo.svg" alt="">
+                        POPU
+                    </a>
+                </div>
+
+                <nav class="navbar">
+                    <a href="/index.html" class="home">Trang chủ</a>
+                    <a href="/shop.html" class="shop">Cửa hàng</a>
+                    <a href="/about.html" class="about">Giới thiệu</a>   
+                    <a href="/contact.html" class="contact active">Liên hệ</a>
+
+                    <div class="icons">
+                        <div class="user-info">
+                                <i class="fas fa-user" id="user-icon"></i> 
+                        </div>
+                        <div class= "icon wishList" id="heart-icon" data-amount="0">
+                            <a href="/wishList.html" class="fas fa-heart" ></a>
+                        </div>
+                        <div class= "icon cart" id="cart-icon" data-amount="0">
+                            <i class="fas fa-shopping-cart" ></i>
+                        </div>
+                    </div>
+                </nav>
+
+              
+                
+
+            </div>
+        </div>
+
+        <div class="navigation-mobile">
+            <a href="/shop.html" class="icon">
+                <i class="fab fa-shopify"></i>
+                <p>Shop</p>
+            </a>
+            <a href="/wishList.html" class="icon noti wishList" data-amount="0">
+                <i class="fas fa-heart"></i>
+                <p>Wishlist</p>
+            </a>
+            <div class="icon noti cart" data-amount="0">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Cart</p>
+            </div>
+            <div class="icon" id ="search-icon-mb">
+                <i class="fas fa-search" ></i>
+                <p>Search</p>
+            </div>
+        </div>
+
+        <div id="app">
+            <div id="contact">
+                <div class="shop-contact">
+                    
+                    <div class="contact-items">
+                        <h2>POPU SHOP</h2>
+                        <div class="contact-info">
+                            <a href="https://www.google.com/maps/" class="address"> 
+                                <i class="fas fa-map-marker-alt"></i>
+                                273 An D.Vương, P.3, Q.5, HCM
+                            </a>
+    
+                            <a href="mailto:shibashop@company.com" class="mail">
+                                <i class="far fa-envelope"></i>
+                                popushop@company.com
+                            </a>
+    
+                            <a href="tel:0012233456" class="phone">
+                                <i class="fas fa-phone"></i>
+                                +0912 345 678
+                            </a>
+                        </div>
+                        
+
+                        <span></span>
+
+                        <h4>Giờ mở cửa đón khách</h4>
+                        <p>Monday to Friday: 9:00 AM – 9:00 PM</p>
+                        <p>Saturday to Sunday: 9:30 AM – 8:00 PM</p>
+
+                        <ul class="footer-logo__social">
+                            <li class="social__icon">
+                                <a href="" id="icon-facebook"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="social__icon">
+                                <a href="" id="icon-twitter"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="social__icon">
+                                <a href="" id="icon-instagram"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="social__icon">
+                                <a href="" id="icon-youtube"> <i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="shop-map">
+                    <h2>ĐỊA CHỈ CỬA HÀNG</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.669726937899!2d106.6800696146224!3d10.759917092332737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1b7c3ed289%3A0xa06651894598e488!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTw6BpIEfDsm4!5e0!3m2!1svi!2s!4v1640518586900!5m2!1svi!2s" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast-app">
+        </div>
+
+
+        <div class="footer">    
+            <div class="footer__container">      
+
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <h2 class="name">POPU</h2>
+                        </a>
+                        
+                        <a href="https://www.google.com/maps/" class="address"> 
+                            <i class="fas fa-map-marker-alt"></i>
+                            273 An D.Vương, P.3, Q.5, HCM
+                        </a>
+
+                        <a href="mailto:shibashop@company.com" class="mail">
+                            <i class="far fa-envelope"></i>
+                            popushop@company.com
+                        </a>
+
+                        <a href="tel:0012233456" class="phone">
+                            <i class="fas fa-phone"></i>
+                            +0912 345 678
+                        </a>
+
+                        <ul class="footer-logo__social">
+                            <li class="social__icon">
+                                <a href="" id="icon-facebook"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="social__icon">
+                                <a href="" id="icon-twitter"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="social__icon">
+                                <a href="" id="icon-instagram"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="social__icon">
+                                <a href="" id="icon-youtube"> <i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="information">
+                        <h2 class="header">THÔNG TIN</h2>
+                        <a href="#" class="content">Trang chủ</a>
+                        <a href="#" class="content">Cửa hàng</a>
+                        <a href="#" class="content">Giới thiệu</a>
+                        <a href="#" class="content">Liên hệ</a>                                
+                    </div>
+
+                    <div class="useful">
+                        <h2 class="header">LIÊN KẾT</h2>
+                        <a href="" class="content">Địa chỉ</a>
+                        <a href="" class="content">Giỏ hàng</a>
+                        <a onclick = "if($('#profile-icon')) $('#profile-icon').click();" class="content">Tài khoản</a>
+                        <a href="#home" class="content">Đơn hàng</a>
+                        <a href="#home" class="content">Danh mục</a>
+                        <a href="#home" class="content">FAQs</a>
+                    </div>
+
+                    <div class="newsletter">
+                        <h2 class="header">ĐĂNG KÝ BẢN TIN</h2>
+                        <p class="content">Đăng ký nhận bản tin của chúng tôi và được giảm giá 10% khi mua hàng đầu tiên của bạn</p>
+                        <form class="mail-user">
+                            <input name="email" type="email" placeholder="Your email address">
+                            <button type ="submit" class="btn">Subcribe</button>
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="footer__img">
+                    <img src="./images/footer.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>Copyright © 2021 PoPu Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+
+
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__cart">
+                <div class="modal__cart-header">
+                    <h1>GIỎ HÀNG</h1>
+                    <button class="btn-exist">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            
+                <div class="box">
+                    <ul class="modal__cart-product-box">
+                    </ul>
+                </div>
+
+                <div class="modal__cart-footer">
+                    <div class="modal__cart-subtotal">
+                        <h3 class="subtotal-text">Tổng tiền:</h3>
+                        <span class="modal__cart-subtotal-all"></span>
+                    </div>
+                    <div class="modal__cart-view-cart">
+                        <button class="btn modal__cart-view-cart-btn">ĐẶT HÀNG</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__body"> 
+                <div class="modal__inner">
+
+                    <div id="sign-in">
+                        <div class="box">
+                            <div class="form">
+                                <div class="form__header">
+                                    <h1>ĐĂNG NHẬP</h1>
+                                </div>
+
+                                <div class="form__container">
+                                    <div class="col-groups">
+                                        <div class="groups">
+                                            <label>Username</label>
+                                            <input type="text" class="username" placeholder="Username">
+                                        </div>
+                                        <div class="groups">
+                                            <label>Password</label>
+                                            <div class="input-pass">
+                                                <input type="password" class="password" placeholder="Password">
+                                                <span class="show-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </span>
+                                            </div>
+                                        </div>  
+                                    </div> 
+                                </div>  
+
+                                <button class="btn btn-signin">Đăng nhập</button>
+                                <p class="hidden">Sign up here</p>
+                                <button class="changeSign hidden">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="action hidden">
+                            <img src="./images/logo.svg" alt="">
+                            <h1 class="header">SHIBA SHOP</h1>
+                            <p>Chào mừng bạn đến với shop của chúng tôi :></p>
+                            <button class="changeSign">
+                                Sign Up
+                                <i class="fas fa-arrow-right"></i>                   
+                            </button>
+                        </div> 
+                    </div>
+
+                    <div id="sign-up">
+                        <div class="action hidden">
+                            <img src="./images/logo.svg" alt="">
+                            <h1 class="header">POPU SHOP</h1>
+                            <p>Hãy đăng ký tài khoản và mua sắm thả ra nào :></p>
+                            <button class="changeSign changeSignIn">
+                                <i class="fas fa-arrow-left"></i>
+                                Sign In
+                            </button>
+                        </div> 
+                        <div class="box">
+                            <div class="form">
+                                <div class="form__header">
+                                    <h1>ĐĂNG KÝ</h1>
+                                </div>
+                                <div class="form__container">
+                                    <div class="col-groups">
+                                        <div class="groups">
+                                            <label for="">Họ và tên</label>
+                                            <input type="text" class="fullname" name="fullname" rules="required" placeholder="Nguyen Van A">
+                                            <span class="message"></span>
+                                        </div>
+                                        <div class="groups">
+                                            <label for="">Địa chỉ</label>
+                                            <input type="text" class="address" name="address" rules="required" placeholder="184 Main Rd E, St Albans VIC 3021">
+                                            <span class="message"></span>
+                                        </div>
+                                        <div class="groups">
+                                            <label for="">Số điện thoại</label>
+                                            <input type="text" class="phone" name="phone" rules="required|isNumber|min:10" placeholder="001 2233 456">
+                                            <span class="message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-groups">
+                                        <div class="groups">
+                                            <label for="">Tài khoản</label>
+                                            <input type="text" class="username" name = "username" rules="required|username|min:5" placeholder="Username">
+                                            <span class="message"></span>
+                                        </div>
+                                        <div class="groups">
+                                            <label>Mật khẩu</label>
+                                            <div class="input-pass">
+                                                <input type="password" class="password" name = "password" rules="required|min:6" placeholder="Password">
+                                                <span class="show-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </span>
+                                            </div>
+                                            <span class="message"></span>
+                                        </div>
+                                        <div class="groups">
+                                            <label for="">Nhập lại mật khẩu</label>
+                                            <div class="input-pass">
+                                                <input type="password" class="password_confirm" name = "password_confirm" rules="required|isConfirmed" placeholder="Password confirm">
+                                                <span class="show-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </span>
+                                            </div>
+                                            <span class="message"></span>
+                                        </div>
+                                    </div>  
+                                </div>
+
+                                <button class="btn btn-signup">Đăng ký</button>
+                                <p class="hidden">Đăng nhập tại đây</p>
+                                <button class="changeSign hidden">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>  
+
+                <button class="btn-exist">
+                    <i class="fas fa-times"></i>
+                </button>
+
+            </div> 
+            
+            <div class="modal__noti">
+                <div class="modal-noti__logo">
+                    <i class="far fa-check-circle" id="icon-success"></i>
+                    <i class="fas fa-times" id="icon-error"></i>
+                </div> 
+                <input type = "text">   
+                <h2 class="modal-noti__disc success"></h2>
+                <h2 class="modal-noti__disc error"></h2>
+                <button class="btn btn-noti">OK</button>
+            </div> 
+
+            <div class="modal__product">
+          
+                
+            </div>
+            
+            <div class="modal__profile">
+
+                <div class="modal-profile__optinons">
+                    <button class="btn-options">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="options__menu">
+                        <li class="option__item" id="edit-profile">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <span>Edit Profile</span>
+                        </li>
+
+                        <li class="option__item" id="change-pass">
+                            <i class="fa-solid fa-key"></i>
+                            <span>Change Pass</span>
+                        </li>
+
+                    </ul>
+                </div>
+                
+                <button class="btn-exist">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-profile__main">
+                    <div class="modal-profile__imgBox">
+                        <img src="./images/user-1.jpg" alt="">
+                    </div>
+
+                    <div class="modal-profile__header">
+                        <h1>USERNAME</h1>
+                    </div>
+
+                    <div class="modal-profile__info">
+                        <div class="form">
+                            <div class="form__container">
+                                <div class="col-groups">
+                                    <div class="groups">
+                                        <label for="">Full name</label>
+                                        <input type="text" class="fullname" name="fullname" rules="required" disabled>
+                                        <span class="message"></span>
+                                    </div>
+                                    <div class="groups">
+                                        <label for="">Address</label>
+                                        <input type="text" class="address" name="address" rules="required" disabled>
+                                        <span class="message"></span>
+                                    </div>
+                                    <div class="groups">
+                                        <label for="">Phone</label>
+                                        <input type="text" class="phone" name="phone" rules="required|isNumber|min:10" disabled>
+                                        <span class="message"></span>
+                                    </div>
+                                </div>  
+                            </div>  
+                            <button class="btn btn-save">SAVE</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-profile__changePass">
+                    <div class="form">
+                        <div class="form__container">
+                            <div class="col-groups">
+                                <div class="groups">
+                                    <label>Current Password</label>
+                                    <div class="input-pass">
+                                        <input type="password" class="current-password" name = "current-password" rules="required|checkPassCurrent" placeholder="Password">
+                                        <span class="show-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                    <span class="message"></span>
+                                </div>
+                                <div class="groups">
+                                    <label>New Password</label>
+                                    <div class="input-pass">
+                                        <input type="password" class="password" name = "password" rules="required|min:6" placeholder="Password">
+                                        <span class="show-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                    <span class="message"></span>
+                                </div>
+                                <div class="groups">
+                                    <label for="">New Password Confirm</label>
+                                    <div class="input-pass">
+                                        <input type="password" class="password_confirm" name = "password_confirm" rules="required|isConfirmed" placeholder="Password confirm">
+                                        <span class="show-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                    <span class="message"></span>
+                                </div>
+                            </div>  
+                            
+                        </div>  
+                        <button class="btn btn-changePass">Change</button>
+                        <button class="btn changeSign">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/config.js"></script>
+
+    <script src="./js/models/data.js"></script>
+    <script src="./js/models/SliderModel.js"></script>
+    <script src="./js/models/ProductModel.js"></script>
+    <script src="./js/models/CategoryModel.js"></script>
+    <script src="./js/models/UserModel.js"></script>
+    <script src="./js/models/TimeExpired.js"></script>
+    <script src="./js/models/BillModel.js"></script>
+    <script src="./js/models/CartModel.js"></script>
+    <script src="./js/models/WishListModel.js"></script>
+
+    <script src="./js/component.js"></script>
+    <script src="./js/validator.js"></script>
+    <script src="./js/event.js"></script>
+    <script src="./js/render.js"></script>
+
+
+
+
+  </body>
+</html>

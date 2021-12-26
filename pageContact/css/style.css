@@ -1,0 +1,125 @@
+
+.shop-map {
+    padding: 50px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shop-map h2 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 20px;
+    border-bottom: 5px solid var(--black);
+}
+
+.shop-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 50px 100px;
+    background-image: url(/images/nen3.jpg);
+    background-size: 100px;
+}
+
+.shop-contact h2 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 20px;
+  
+}
+
+.contact-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(212, 212, 212, 0.9);
+    padding: 20px 150px;
+}
+
+.contact-items a {
+    font-size: 25px;
+    color: #000;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-items a:hover {
+    color: var(--red);
+    transform: translateX(5px);
+}
+
+.contact-info {
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.contact-items span {
+    height: 2px;
+    width: 200px;
+    background-color: #000;
+    margin-bottom: 10px;
+}
+
+.contact-items h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.contact-items p {
+    font-size: 18px;
+}
+.contact-items .footer-logo__social {
+    margin-top: 20px;
+}
+
+.contact-items .footer-logo__social .social__icon i {
+    margin: 0 20px;
+    color: #000;
+}
+
+.contact-items .footer-logo__social .social__icon:hover {
+    transform: translateY(-30%);
+}
+.contact-items #icon-facebook i{
+    color: #004889;
+}
+.contact-items #icon-twitter i {
+    color: #00a0f0;
+}
+
+.contact-items #icon-instagram i {
+        color: #d31585;
+}
+
+.contact-items #icon-youtube i {
+        color: #ff0000;
+}
+
+.contact-items .footer-logo__social .social__icon:hover #icon-facebook i {
+    color: #004889;
+    text-shadow: 0 0 25px #004889;
+}
+
+.contact-items .footer-logo__social .social__icon:hover #icon-twitter i {
+    color: #00a0f0;
+    text-shadow: 0 0 25px #00a0f0;
+}
+
+.contact-items .footer-logo__social .social__icon:hover #icon-instagram i {
+    color: #d31585;
+    text-shadow: 0 0 25px #d31585;
+}
+
+.contact-items .footer-logo__social .social__icon:hover #icon-youtube i {
+    color: #ff0000;
+    text-shadow: 0 0 25px #ff0000;
+}
