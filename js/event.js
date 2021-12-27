@@ -78,6 +78,7 @@ const navbarEvent = {
                 }
             });
 
+           
             UserModel.UpdateAll(users);
             CartModel.UpdateCart([]);
             WishListModel.UpdateWish([]);
@@ -96,9 +97,11 @@ const navbarEvent = {
             if(window.location.href.includes('wishList'))
             renderWishList.start();
 
-            if(window.location.href.includes('shop'))
-            renderShop.start();
-
+            if(window.location.href.includes('shop')) {
+                renderShop.configProducts = ProductModel.getAll();
+                renderShop.start();
+            }
+           
             if(window.location.href.includes('order'))
             renderOrderPage.items();
             
@@ -145,6 +148,13 @@ const wishListEvent = {
 
         ProductModel.updateWish(icon.dataset.id, icon.dataset.wish);
         WishListModel.ChangeStatusWish(icon.dataset.id, icon.dataset.wish);
+
+        if(window.location.href.includes('shop'))
+        {
+            for(let product of renderShop.configProducts )
+                if(product.id == icon.dataset.id) 
+                product.wish = icon.dataset.wish;
+        }
     },
 
     updateProductBeWish() {
@@ -218,6 +228,19 @@ const itemProductEvent = {
                 e.stopPropagation();
                 wishListEvent.changeStatusWish(icon);
                 renderComponentNavbar.amountWishlist();
+
+                if(!icon.classList.contains('modalIconHeart')) return;
+
+                if(window.location.href.includes('index'))
+                renderHome.products();
+
+                if(window.location.href.includes('wishList'))
+                renderWishList.start();
+
+                if(window.location.href.includes('shop'))
+                renderShop.start();
+                
+               
             };
         });
 
@@ -408,10 +431,12 @@ const modalSignEvent = {
                 $('.modal-noti__disc.success').innerText = 'Đăng nhập thành công';
 
                 //update lại data của người dùng khi đăng nhập
-                let cart = [...userCurrent.cart, ...CartModel.GetCart()];
-                CartModel.UpdateCart(cart);
+                userCurrent.cart.forEach(product => {
+                    CartModel.AddProduct(product);
+                });
 
-                let wishList = [...userCurrent.wishList, ...WishListModel.GetWish()];
+                let wishList = new Set([...userCurrent.wishList, ...WishListModel.GetWish()]);
+                wishList = [...wishList];
                 WishListModel.UpdateWish(wishList);
 
                 wishListEvent.updateProductBeWish();
@@ -529,8 +554,7 @@ const modalCartEvent = {
     btnDelete() {
         $$('.modal__cart-delete-icon')?.forEach(btn => {
             btn.onclick = () => {
-                let product =ProductModel.getById(btn.dataset.id);
-                CartModel.DeleteProduct(product);
+                CartModel.DeleteProduct(btn.dataset.id);
                 renderModalCart.start();
             }
         })
@@ -832,15 +856,10 @@ const eventOrderPage = {
     btnCancell() {
         $$('.btn-cancelled')?.forEach(btn => {
             btn.onclick = () => {
-                let bills = BillModel.getAll();
-                bills.forEach(bill => {
-                    if(bill.id == btn.dataset.id) {
-                        bill.status = 'CANCELLED';
-                    }
-                    BillModel.UpdateAll(bills);
-                    renderOrderPage.start();
-                    $('.orderPage-filter__item.ALL').click();
-                })
+                $('.modal').classList.add('active');
+                $('.modal__order').classList.add('active');
+                $('.modal-noti__disc.warning').innerText = 'BẠN CÓ CHẮC CHẮN HỦY ĐƠN NÀY ???';
+                eventOrderPage.btnWarningCancel(btn.dataset.id);
             }
         })
     },
@@ -848,15 +867,10 @@ const eventOrderPage = {
     btnComplete() {
         $$('.btn-complete')?.forEach(btn => {
             btn.onclick = () => {
-                let bills = BillModel.getAll();
-                bills.forEach(bill => {
-                    if(bill.id == btn.dataset.id) {
-                        bill.status = 'COMPLETED';
-                    }
-                })
-                BillModel.UpdateAll(bills);
-                renderOrderPage.start();
-                $('.orderPage-filter__item.ALL').click();
+                $('.modal').classList.add('active');
+                $('.modal__order').classList.add('active');
+                $('.modal-noti__disc.warning').innerText = 'BẠN CÓ CHẮC ĐÃ NHẬN ĐƯỢC ĐƠN NÀY ???';
+                eventOrderPage.btnWarningComp(btn.dataset.id);
             }
         })
     },
@@ -871,6 +885,47 @@ const eventOrderPage = {
                 renderOrderPage.items(filter);
             };
         });
+    },
+
+    btnWarningCancel(id) {
+        $('.btn-warning-ok').onclick = () => {
+            let bills = BillModel.getAll();
+            bills.forEach(bill => {
+                if(bill.id == id) {
+                    bill.status = 'CANCELLED';
+                }
+                BillModel.UpdateAll(bills);
+                renderOrderPage.start();
+                $('.orderPage-filter__item.ALL').click();
+            })
+            $('.modal').classList.remove('active');
+            $('.modal__order').classList.remove('active');
+        }
+        $('.btn-warning-cancel').onclick = () => {
+            $('.modal').classList.remove('active');
+            $('.modal__order').classList.remove('active');
+        }
+    },
+
+    btnWarningComp(id) {
+        $('.btn-warning-ok').onclick = () => {
+            let bills = BillModel.getAll();
+            bills.forEach(bill => {
+                if(bill.id == id) {
+                    bill.status = 'COMPLETED';
+                }
+            })
+            BillModel.UpdateAll(bills);
+            renderOrderPage.start();
+
+            $('.orderPage-filter__item.ALL').click();
+            $('.modal').classList.remove('active');
+            $('.modal__order').classList.remove('active');
+        }
+        $('.btn-warning-cancel').onclick = () => {
+            $('.modal').classList.remove('active');
+            $('.modal__order').classList.remove('active');
+        }
     },
 
     init() {
@@ -965,7 +1020,7 @@ const shopEvent = {
     
             $('input.price-from').value = "";
             $('input.price-to').value = "";
-            $('.filter-rate-items.active').classList.remove('active')
+            $('.filter-rate-items.active')?.classList.remove('active')
             $('.shop-products__filter input').value = "";
 
             shopEvent.filterProductAdvanced();

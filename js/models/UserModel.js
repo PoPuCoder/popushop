@@ -7,6 +7,12 @@ const UserModel = {
         localStorage.setItem('users', JSON.stringify(data));
     },
 
+    Insert: function (document) {
+        let result = this.getAll();
+        result.push(document);
+        this.UpdateAll(result);
+    },
+
     getAll: function () {
         return JSON.parse(localStorage.getItem('users'));
     },

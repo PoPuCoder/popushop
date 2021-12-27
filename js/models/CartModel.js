@@ -17,9 +17,12 @@ const CartModel = {
         localStorage.setItem('CART', JSON.stringify(cart));
     },
 
-    DeleteProduct(product) {
-        let cart = this.GetCart()
-        let index = cart.indexOf(product);
+    DeleteProduct(id) {
+        let cart = this.GetCart();
+        let index = 0;
+        cart.forEach((product, ind) => {
+            if(product.id == id ) index = ind;
+        });
         cart.splice(index, 1);
         this.UpdateCart(cart);
     },

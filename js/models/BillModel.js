@@ -12,6 +12,9 @@ const BillModel = {
         let bills = this.getAll();
         bills.push(bill);
         this.UpdateAll(bills);
+    },
+    AmountBillOfUser(username) {
+        return this.getAll().filter(bill=> bill.username == username).length;
     }
 };
 
