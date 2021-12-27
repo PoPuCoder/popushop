@@ -9,15 +9,15 @@ function UserInfo(user) {
             <ul>
                 <li class="menu__item"  id="profile-icon">
                     <i class="fas fa-user"></i>
-                    <p>Profile</p>
+                    <p>Thông tin</p>
                 </li>
                 <li class="menu__item">
                     <i class="fas fa-file-invoice-dollar"></i>
-                    <a href="#order">Order</a>
+                    <a href="/order.html">Đơn hàng (${BillModel.AmountBillOfUser(user.username)})</a>
                 </li>
                 <li class="menu__item" id="icon-logout">
                     <i class="fas fa-sign-out-alt"></i>
-                    <p>Logout</p>  
+                    <p>Đăng xuất</p>  
                 </li>
             </ul>
         </div>
@@ -161,7 +161,7 @@ function ModalProductItem(product) {
                 <button class="cart__item-increment" data-id = "${product.id}">+</button>
             </div>
 
-            <div class="icon-heart ${product.wish == 1 && 'active'}" data-id="${product.id}" data-wish="${product.wish}">
+            <div class="icon-heart ${product.wish == 1 && 'active'} modalIconHeart" data-id="${product.id}" data-wish="${product.wish}">
                 <i class="far fa-heart"></i>
                 <i class="fas fa-heart"></i>
             </div>

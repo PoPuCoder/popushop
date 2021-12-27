@@ -46,7 +46,7 @@ const ProductModel = {
             }
         }
         this.UpdateAll(collection);
-    },
+    }
 };
 
 if (ProductModel.getAll() == null) ProductModel.Initialize();
