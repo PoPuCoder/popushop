@@ -534,8 +534,6 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-1-img-1.jpg',
-            './images/products/product-1-img-2.jpg',
             './images/products/product-1-img-3.jpg',
             './images/products/product-1-img-4.jpg',
         ],
@@ -549,7 +547,6 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-2-img-1.jpg',
             './images/products/product-2-img-2.jpg',
             './images/products/product-2-img-3.jpg',
         ],
@@ -563,8 +560,6 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-3-img-1.jpg',
-            './images/products/product-3-img-2.jpg',
             './images/products/product-3-img-3.jpg',
             './images/products/product-3-img-4.jpg',
         ],
@@ -578,7 +573,6 @@ let PRODUCTS = [
         rate: 1,
         wish: 0,
         imgList: [
-            './images/products/product-4-img-1.jpg',
             './images/products/product-4-img-2.jpg',
             './images/products/product-4-img-3.jpg',
         ],
@@ -593,8 +587,6 @@ let PRODUCTS = [
         rate: 4,
         wish: 0,
         imgList: [
-            './images/products/product-5-img-1.jpg',
-            './images/products/product-5-img-3.jpg',
             './images/products/product-5-img-2.jpg',
             './images/products/product-5-img-4.jpg',
         ],
@@ -609,7 +601,6 @@ let PRODUCTS = [
         rate: 3,
         wish: 0,
         imgList: [
-            './images/products/product-6-img-1.jpg',
             './images/products/product-6-img-2.jpg',
             './images/products/product-6-img-3.jpg',
         ],
@@ -623,8 +614,6 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-7-img-1.jpg',
-            './images/products/product-7-img-2.jpg',
             './images/products/product-7-img-3.jpg',
             './images/products/product-7-img-4.jpg',
         ],
@@ -638,8 +627,6 @@ let PRODUCTS = [
         rate: 4,
         wish: 0,
         imgList: [
-            './images/products/product-8-img-1.jpg',
-            './images/products/product-8-img-2.jpg',
             './images/products/product-8-img-3.jpg',
             './images/products/product-8-img-4.jpg',
         ],
@@ -653,7 +640,6 @@ let PRODUCTS = [
         rate: 3,
         wish: 0,
         imgList: [
-            './images/products/product-9-img-1.jpg',
             './images/products/product-9-img-2.jpg',
             './images/products/product-9-img-3.jpg',
         ],
@@ -667,8 +653,6 @@ let PRODUCTS = [
         rate: 4,
         wish: 0,
         imgList: [
-            './images/products/product-10-img-1.jpg',
-            './images/products/product-10-img-2.jpg',
             './images/products/product-10-img-3.jpg',
             './images/products/product-10-img-4.jpg',
         ],
@@ -676,15 +660,15 @@ let PRODUCTS = [
     },
     {
         id: 41,
-        name: 'OPPO Reno6 Pro',
+        name: 'OPPO Reno6 Pro 2',
         sale: 2485,
         price: 3678,
         category: 'PHONE',
         rate: 3,
         wish: 0,
         imgList: [
-            './images/products/product-11-img-1.jpg',
             './images/products/product-11-img-2.jpg',
+            './images/products/product-11-img-1.jpg',
         ],
         colorList: ['--gray:1', '--lightBlue:2'],
     },
@@ -697,8 +681,6 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-12-img-1.jpg',
-            './images/products/product-12-img-2.jpg',
             './images/products/product-12-img-3.jpg',
             './images/products/product-12-img-4.jpg',
         ],
@@ -713,8 +695,8 @@ let PRODUCTS = [
         rate: 1,
         wish: 0,
         imgList: [
-            './images/products/product-13-img-1.jpg',
             './images/products/product-13-img-2.jpg',
+            './images/products/product-13-img-1.jpg',
         ],
         colorList: ['--black:1', '--pink:2'],
     },
@@ -727,7 +709,6 @@ let PRODUCTS = [
         rate: 3,
         wish: 0,
         imgList: [
-            './images/products/product-14-img-1.jpg',
             './images/products/product-14-img-2.jpg',
             './images/products/product-14-img-3.jpg',
         ],
@@ -757,7 +738,6 @@ let PRODUCTS = [
         rate: 3,
         wish: 0,
         imgList: [
-            './images/products/product-16-img-1.jpg',
             './images/products/product-16-img-2.jpg',
             './images/products/product-16-img-3.jpg',
         ],
@@ -771,8 +751,9 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-17-img-1.jpg',
             './images/products/product-17-img-2.jpg',
+            './images/products/product-17-img-1.jpg',
+            
         ],
     },
     {
@@ -784,9 +765,9 @@ let PRODUCTS = [
         rate: 1,
         wish: 0,
         imgList: [
-            './images/products/product-18-img-1.jpg',
             './images/products/product-18-img-2.jpg',
             './images/products/product-18-img-3.jpg',
+            './images/products/product-18-img-1.jpg',
         ],
     },
     {
@@ -798,9 +779,9 @@ let PRODUCTS = [
         rate: 4,
         wish: 0,
         imgList: [
-            './images/products/product-19-img-1.jpg',
             './images/products/product-19-img-2.jpg',
             './images/products/product-19-img-3.jpg',
+            './images/products/product-19-img-1.jpg',
         ],
     },
     {
@@ -812,9 +793,9 @@ let PRODUCTS = [
         rate: 3,
         wish: 0,
         imgList: [
+            './images/products/product-20-img-3.jpg',
             './images/products/product-20-img-1.jpg',
             './images/products/product-20-img-2.jpg',
-            './images/products/product-20-img-3.jpg',
         ],
     },
     {
@@ -826,8 +807,8 @@ let PRODUCTS = [
         rate: 4,
         wish: 0,
         imgList: [
-            './images/products/product-21-img-1.jpg',
             './images/products/product-21-img-2.jpg',
+            './images/products/product-21-img-1.jpg',
             './images/products/product-21-img-3.jpg',
         ],
     },
@@ -840,8 +821,6 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-22-img-1.jpg',
-            './images/products/product-22-img-2.jpg',
             './images/products/product-22-img-3.jpg',
             './images/products/product-22-img-4.jpg',
         ],
@@ -856,7 +835,6 @@ let PRODUCTS = [
         rate: 1,
         wish: 0,
         imgList: [
-            './images/products/product-23-img-1.jpg',
             './images/products/product-23-img-2.jpg',
             './images/products/product-23-img-3.jpg',
         ],
@@ -870,8 +848,6 @@ let PRODUCTS = [
         rate: 4,
         wish: 0,
         imgList: [
-            './images/products/product-24-img-1.jpg',
-            './images/products/product-24-img-2.jpg',
             './images/products/product-24-img-3.jpg',
             './images/products/product-24-img-4.jpg',
         ],
@@ -885,9 +861,6 @@ let PRODUCTS = [
         rate: 3,
         wish: 0,
         imgList: [
-            './images/products/product-25-img-1.jpg',
-            './images/products/product-25-img-2.jpg',
-            './images/products/product-25-img-3.jpg',
             './images/products/product-25-img-4.jpg',
             './images/products/product-25-img-5.jpg',
         ],
@@ -902,7 +875,6 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
-            './images/products/product-26-img-1.jpg',
             './images/products/product-26-img-2.jpg',
             './images/products/product-26-img-3.jpg',
         ],
@@ -916,7 +888,6 @@ let PRODUCTS = [
         rate: 1,
         wish: 0,
         imgList: [
-            './images/products/product-27-img-1.jpg',
             './images/products/product-27-img-2.jpg',
             './images/products/product-27-img-3.jpg',
         ],
@@ -930,8 +901,8 @@ let PRODUCTS = [
         rate: 4,
         wish: 0,
         imgList: [
-            './images/products/product-28-img-1.jpg',
             './images/products/product-28-img-2.jpg',
+            './images/products/product-28-img-1.jpg',
         ],
     },
     {
@@ -943,9 +914,9 @@ let PRODUCTS = [
         rate: 2,
         wish: 0,
         imgList: [
+            './images/products/product-29-img-3.jpg',
             './images/products/product-29-img-1.jpg',
             './images/products/product-29-img-2.jpg',
-            './images/products/product-29-img-3.jpg',
         ],
     },
     {
@@ -957,9 +928,9 @@ let PRODUCTS = [
         rate: 1,
         wish: 0,
         imgList: [
+            './images/products/product-15-img-3.jpg',
             './images/products/product-15-img-1.jpg',
             './images/products/product-15-img-2.jpg',
-            './images/products/product-15-img-3.jpg',
         ],
     },
 ];
